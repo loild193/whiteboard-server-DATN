@@ -5,7 +5,7 @@
   "author": "LeDucLoi193 <dekaito193@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\"",
+    "prepare": "husky install",
     "ts-check": "tsc --noemit",
     "lint": "eslint -c .eslintrc.js --ext .ts,.tsx src --quiet",
     "dev": "nodemon -r tsconfig-paths/register index.ts",

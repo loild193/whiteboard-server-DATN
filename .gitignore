@@ -12,6 +12,7 @@ node_modules/
 
 # production env file
 .env
+dist
 
 # vscode
 .vscode

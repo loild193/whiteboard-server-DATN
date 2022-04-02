@@ -4,6 +4,9 @@
   "main": "dist/index.js",
   "author": "LeDucLoi193 <dekaito193@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "ts-check": "tsc --noemit",
     "lint": "eslint -c .eslintrc.js --ext .ts,.tsx src --quiet",

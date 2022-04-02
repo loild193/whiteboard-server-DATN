@@ -9,7 +9,7 @@
     "ts-check": "tsc --noemit",
     "lint": "eslint -c .eslintrc.js --ext .ts,.tsx src --quiet",
     "dev": "nodemon -r tsconfig-paths/register index.ts",
-    "start": "node index.ts",
+    "start": "node index.js",
     "prettier-src-window": "yarn prettier --config .prettierrc src/**/*.{ts,tsx} --write"
   },
   "dependencies": {

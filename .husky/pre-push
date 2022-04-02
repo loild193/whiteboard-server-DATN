@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn prettier-src-window && yarn ts-check && yarn lint
+yarn prettier-src-window && yarn ts-check && yarn lint && unset GIT_DIR

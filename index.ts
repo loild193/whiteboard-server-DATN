@@ -40,5 +40,7 @@ io.on('connect', (socket) => {
   })
 })
 
+app.get('/', (_, res) => res.send('Hello bro'))
+
 const PORT = process.env.PORT ?? 8080
 httpServer.listen(PORT, () => console.log(`Server started on port ${PORT}`))

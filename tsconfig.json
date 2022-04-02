@@ -16,6 +16,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUnusedParameters": true,
     "noUnusedLocals": true,
+    "outDir": "./dist",
     "paths": {
       "@routes/*": ["src/routes/*"],
       "@config/*": ["src/config/*"],
@@ -30,7 +31,7 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
-    "target": "es5",
+    "target": "ES2019",
     "removeComments": true,
     "importHelpers": true,
     "typeRoots": ["./node_modules/@types"],

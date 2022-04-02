@@ -14,6 +14,7 @@
     "noUnusedParameters": true,
     "noUnusedLocals": true,
     "outDir": "./dist",
+    "rootDir": ".",
     "paths": {
       "@routes/*": ["src/routes/*"],
       "@config/*": ["src/config/*"],

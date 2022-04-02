@@ -5,11 +5,10 @@
   "author": "LeDucLoi193 <dekaito193@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\"",
     "ts-check": "tsc --noemit",
     "lint": "eslint -c .eslintrc.js --ext .ts,.tsx src --quiet",
     "dev": "nodemon -r tsconfig-paths/register index.ts",
-    "start": "node index.ts",
     "prettier-src-window": "yarn prettier --config .prettierrc src/**/*.{ts,tsx} --write"
   },
   "dependencies": {
@@ -30,7 +29,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^4.0.6",
+    "husky": "^7.0.4",
     "nodemon": "^2.0.15",
     "prettier": "^2.6.1",
     "ts-node": "^10.7.0",

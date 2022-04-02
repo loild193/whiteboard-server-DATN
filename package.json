@@ -10,7 +10,6 @@
     "dev": "nodemon -r tsconfig-paths/register index.ts",
     "build": "tsc",
     "start": "node index.js",
-    "prepare": "node prepare.ts",
     "prettier-src-window": "yarn prettier --config .prettierrc src/**/*.{ts,tsx} --write"
   },
   "dependencies": {

@@ -1,7 +1,7 @@
 {
   "name": "whiteboard-server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "author": "LeDucLoi193 <dekaito193@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "eslint -c .eslintrc.js --ext .ts,.tsx src --quiet",
     "dev": "nodemon -r tsconfig-paths/register index.ts",
     "build": "tsc",
-    "start": "node index.ts",
+    "start": "node .",
     "prettier-src-window": "yarn prettier --config .prettierrc src/**/*.{ts,tsx} --write"
   },
   "dependencies": {

@@ -5,11 +5,12 @@
   "author": "LeDucLoi193 <dekaito193@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "prepare": "node prepare.ts",
     "ts-check": "tsc --noemit",
     "lint": "eslint -c .eslintrc.js --ext .ts,.tsx src --quiet",
     "dev": "nodemon -r tsconfig-paths/register index.ts",
-    "start": "ts-node index.ts",
+    "build": "tsc",
+    "start": "node index.js",
+    "prepare": "node prepare.ts",
     "prettier-src-window": "yarn prettier --config .prettierrc src/**/*.{ts,tsx} --write"
   },
   "dependencies": {
@@ -18,6 +19,7 @@
     "express": "^4.17.3",
     "jsonwebtoken": "^8.5.1",
     "socket.io": "^4.4.1",
+    "ts-node": "^10.7.0",
     "tslib": "^2.3.1"
   },
   "devDependencies": {
@@ -33,7 +35,7 @@
     "husky": "^7.0.4",
     "nodemon": "^2.0.15",
     "prettier": "^2.6.1",
-    "ts-node": "^10.7.0",
+
     "tsconfig-paths": "^3.14.1",
     "typescript": "^4.6.3"
   }

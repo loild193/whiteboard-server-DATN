@@ -26,10 +26,18 @@ io.on('connect', (socket) => {
   connections.push(socket)
   console.log(`${socket.id} has connected`)
 
-  socket.on(SOCKET_IO_EVENTS.DRAW_END, (data) => {
+  socket.on(SOCKET_IO_EVENTS.DRAW_LINE_END, (data) => {
     connections.map((connection) => {
       if (connection.id !== socket.id) {
-        connection.emit(SOCKET_IO_EVENTS.ON_DRAW_END, data)
+        connection.emit(SOCKET_IO_EVENTS.ON_DRAW_LINE_END, data)
+      }
+    })
+  })
+
+  socket.on(SOCKET_IO_EVENTS.DRAW_RECT_END, (data) => {
+    connections.map((connection) => {
+      if (connection.id !== socket.id) {
+        connection.emit(SOCKET_IO_EVENTS.ON_DRAW_RECT_END, data)
       }
     })
   })

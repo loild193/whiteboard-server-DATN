@@ -42,6 +42,14 @@ io.on('connect', (socket) => {
     })
   })
 
+  socket.on(SOCKET_IO_EVENTS.DRAW_CIRCLE_END, (data) => {
+    connections.map((connection) => {
+      if (connection.id !== socket.id) {
+        connection.emit(SOCKET_IO_EVENTS.ON_DRAW_CIRCLE_END, data)
+      }
+    })
+  })
+
   socket.on('disconnect', () => {
     console.log(`${socket.id} is disconnected`)
     connections = connections.filter((connection) => connection.id !== socket.id)

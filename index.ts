@@ -50,6 +50,14 @@ io.on('connect', (socket) => {
     })
   })
 
+  socket.on(SOCKET_IO_EVENTS.ADD_TEXT, (data) => {
+    connections.map((connection) => {
+      if (connection.id !== socket.id) {
+        connection.emit(SOCKET_IO_EVENTS.ON_ADD_TEXT_END, data)
+      }
+    })
+  })
+
   socket.on('disconnect', () => {
     console.log(`${socket.id} is disconnected`)
     connections = connections.filter((connection) => connection.id !== socket.id)
